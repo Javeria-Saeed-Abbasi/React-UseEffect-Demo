@@ -43,7 +43,7 @@ jobs:
         run: npm install --global surge
       
       - name: Delpoy to Surge
-        run: surge ./build react-recipe-app.surge.sh --token ${{ secrets.SURGE_TOKEN_KEY }}
+        run: surge ./build react-useeffect-recipe-app.surge.sh --token ${{ secrets.SURGE_TOKEN_KEY }}
           
 
       # Runs a set of commands using the runners shell
