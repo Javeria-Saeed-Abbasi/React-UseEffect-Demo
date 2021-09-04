@@ -29,9 +29,10 @@ const App = () => {
     {
       
       recipes.map((r,id) => (
-        <Recipe key={id} label={r.recipe.label} image={r.recipe.image} calories={r.recipe.calories} cuisineType={r.recipe.cuisineType}/>
-      ))
-    }      
+        <Recipe key={id} label={r.recipe.label} image={r.recipe.image} calories={r.recipe.calories} cuisineType={r.recipe.cuisineType} ingredients={r.recipe.ingredients}/>
+        ))
+    }
+
     </div>
   )
 };
