@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import Recipe from './components/Recipe';
@@ -6,26 +7,57 @@ const App = () => {
 
   const APP_ID ="43c41042";
   const APP_KEY ="68622041ef594128e043f20e6e7c7c18";
-  const API_URL =`https://api.edamam.com/search?q=cherry&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
-  
   const [recipes, setRecipes] = useState([]);
+  // For Searching
+  const [search, setSearch] = useState('');
+  // For SetQuery
+  const [query, SetQuery] = useState('cherry');
+
+  const API_URL =`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
   useEffect(() => {
     loadData();
-  }, []);
+  }, [query]);
 
+  // For getting data by Search 
     const loadData = async () => {
-    const response = await fetch(API_URL);
-    const data = await response.json();
-    setRecipes(data.hits);
-    console.log(data.hits);
-  }
+    const response = await axios.get(API_URL);
+    setRecipes(response.data.hits);
+    console.log(response.data.hits);
+  };
 
+// //For fetching data from API without Search
+  //   const loadData = async () => {  
+  //   const response = await fetch(API_URL);
+  //   const data = await response.json();
+  //   setRecipes(data.hits);
+  //   console.log(data.hits);
+  // }
+
+
+  // Change Recipe on Search
+  const updateSearch = (e) => {
+    setSearch(e.target.value);
+    console.log(e.target.value);
+  };
+
+  // Update Recipe on Search
+  const updateQuery = (e) => {
+    e.preventDefault();
+    SetQuery(search);
+  };
 
   return (
     <div className="App">
       <h1>Food Searching</h1>
+      {/* Search Bar */}
+      <div>
+        <form onSubmit={updateQuery}>
+          <input type="text" value={search} onChange= {updateSearch} />
+          <button type="submit"> Submit</button>
+        </form>
+      </div>
     {
       
       recipes.map((r,id) => (

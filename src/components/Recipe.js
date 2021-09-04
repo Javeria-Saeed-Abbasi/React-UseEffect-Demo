@@ -9,14 +9,13 @@ const Recipe = ({label, image, calories, cuisineType, ingredients}) => {
             <p>Cuisine Type: <b>{cuisineType}</b></p>
             <img src={image} alt={label} />
             <div>
-           {       <pre>
+           {      
             <ul>
                    {ingredients.map((ingredients) => (
-                       <li>{ingredients.text}</li>
+                    <p>{ingredients.text}</p>
                    )
                    )}
             </ul>
-                </pre>
                   
                     }
         </div>
