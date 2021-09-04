@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Recipe = ({title, image, calories}) => {
+const Recipe = ({label, image, calories, cuisineType}) => {
     return(
         <div>
-            <h2>Recipe Name: {title}</h2>
-            <p>Calories: {calories}</p>
-            <img src={image} alt={title} />
+            <h2>Recipe Name: {label}</h2>
+            <p>Calories:{Math.floor(calories)}</p>
+            <p>Cuisine Type: <b>{cuisineType}</b></p>
+            <img src={image} alt={label} />
         </div>
     )
 }

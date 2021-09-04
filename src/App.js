@@ -6,7 +6,7 @@ const App = () => {
 
   const APP_ID ="43c41042";
   const APP_KEY ="68622041ef594128e043f20e6e7c7c18";
-  const API_URL =`https://api.edamam.com/search?q=pizza&app_id=${APP_ID}&app_key=${APP_KEY}`;
+  const API_URL =`https://api.edamam.com/search?q=cherry&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
   
   const [recipes, setRecipes] = useState([]);
@@ -29,7 +29,7 @@ const App = () => {
     {
       
       recipes.map((r,id) => (
-        <Recipe key={id} title={r.recipe.title} image={r.recipe.image} calories={r.recipe.calories}/>
+        <Recipe key={id} label={r.recipe.label} image={r.recipe.image} calories={r.recipe.calories} cuisineType={r.recipe.cuisineType}/>
       ))
     }      
     </div>
