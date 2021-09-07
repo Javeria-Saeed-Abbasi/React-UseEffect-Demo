@@ -1,16 +1,9 @@
+body{
+  margin: 0 auto;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: bisque;
 }
 
 .App-header {
@@ -35,4 +28,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+.header{
+  background-color: black;
+  height: 100px;
+  color: aliceblue;
+  display: flex;
+}
+.header .logo{
+  background-color: aqua;
+  height: 90px;
+  text-align: center;
+  width: 100px;
+}
+.header h1{
+  background-color: chartreuse;
+}
+.recipecard{
+    background-color: cadetblue;
+    display: inline-block;
+    max-width: 300px;
+    margin: 3px;
+    padding: 5px;
+}
+
+.recipecard ul {
+  display: none;
 }

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import Recipe from './components/Recipe';
+import Header from './components/Header';
 
 const App = () => {
 
@@ -36,7 +37,7 @@ const App = () => {
   // }
 
 
-  // Change Recipe on Search
+  // Get change Recipe on Search
   const updateSearch = (e) => {
     setSearch(e.target.value);
     console.log(e.target.value);
@@ -50,9 +51,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Food Searching</h1>
+      <Header/>
       {/* Search Bar */}
-      <div>
+      <div className="search-bar">
         <form onSubmit={updateQuery}>
           <input type="text" value={search} onChange= {updateSearch} />
           <button type="submit"> Submit</button>
