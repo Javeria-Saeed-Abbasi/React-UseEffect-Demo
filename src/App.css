@@ -3,7 +3,7 @@ body{
 }
 .App {
   text-align: center;
-  background-color: bisque;
+  background-color: #f7c216;
 }
 
 .App-header {
@@ -29,29 +29,57 @@ body{
     transform: rotate(360deg);
   }
 }
+/* Styling */
 .header{
   background-color: black;
   height: 100px;
   color: aliceblue;
   display: flex;
+  /* margin-bottom: 15px; */
 }
 .header .logo{
   background-color: aqua;
   height: 90px;
   text-align: center;
   width: 100px;
+  margin: 5px 0px 5px 50px;
+
 }
 .header h1{
-  background-color: chartreuse;
+  /* background-color: chartreuse; */
+  text-align: center;
+  width: 75%;
 }
 .recipecard{
-    background-color: cadetblue;
+    background-color: rgb(0, 0, 0);
     display: inline-block;
     max-width: 300px;
-    margin: 3px;
+    margin: 5px;
     padding: 5px;
+    border-radius: 10px;
+    color: white;
 }
 
 .recipecard ul {
   display: none;
+}
+.search-bar {
+  margin-bottom: 10px;
+  padding: 20px 0px ;
+}
+.search-bar input[type=text] {
+  background-color: transparent rgb(220, 220, 220);
+  border: none;
+  padding: 15px 60px;
+  border-radius: 10px;
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+.search-bar button{
+  background-color: black;
+  color: #f7c216;
+  margin-left:10px;
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-size: large;
 }

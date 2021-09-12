@@ -4,6 +4,7 @@ import './App.css';
 import Recipe from './components/Recipe';
 import Header from './components/Header';
 
+
 const App = () => {
 
   const APP_ID ="43c41042";
@@ -55,7 +56,7 @@ const App = () => {
       {/* Search Bar */}
       <div className="search-bar">
         <form onSubmit={updateQuery}>
-          <input type="text" value={search} onChange= {updateSearch} />
+          <input type="text" aria-pressed="true" value={search} onChange= {updateSearch} />
           <button type="submit"> Submit</button>
         </form>
       </div>
