@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Recipe from './components/Recipe';
 import Header from './components/Header';
+// import logo2 from './images/logo2.png';
 
 
 const App = () => {
@@ -56,7 +57,7 @@ const App = () => {
       {/* Search Bar */}
       <div className="search-bar">
         <form onSubmit={updateQuery}>
-          <input type="text" aria-pressed="true" value={search} onChange= {updateSearch} placeholder="Search Your Food" />
+          <input type="text" aria-pressed="true" value={search} onChange= {updateSearch} placeholder="Search Your Food..." />
           <button type="submit"> Submit</button>
         </form>
       </div>
