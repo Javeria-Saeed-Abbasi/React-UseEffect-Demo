@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Recipe from './components/Recipe';
 import Header from './components/Header';
-// import logo2 from './images/logo2.png';
 
 
 const App = () => {
