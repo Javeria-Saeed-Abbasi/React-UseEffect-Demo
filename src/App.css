@@ -54,11 +54,14 @@ body{
     background-color: rgb(0, 0, 0);
     display: inline-block;
     max-width: 300px;
-    margin: 5px;
+    margin: 10px;
+    margin-bottom: 100px;
     padding: 5px;
+    border: transparent;
     border-radius: 10px;
     color: white;
-}
+    /* box-shadow: 5px 5px 5px 5px rgb(0, 0, 0); */
+    box-shadow: rgb(0, 0, 0) 0px 50px 40px -10px;}
 
 .recipecard ul {
   display: none;

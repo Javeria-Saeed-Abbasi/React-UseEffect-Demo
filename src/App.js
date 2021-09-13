@@ -56,7 +56,7 @@ const App = () => {
       {/* Search Bar */}
       <div className="search-bar">
         <form onSubmit={updateQuery}>
-          <input type="text" aria-pressed="true" value={search} onChange= {updateSearch} />
+          <input type="text" aria-pressed="true" value={search} onChange= {updateSearch} placeholder="Search Your Food" />
           <button type="submit"> Submit</button>
         </form>
       </div>
