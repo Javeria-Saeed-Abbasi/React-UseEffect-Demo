@@ -6,10 +6,14 @@ const Recipe = ({label, image, calories, cuisineType, ingredients}) => {
     return(
         
         <div className="recipecard">
-            <h2>Recipe Name: {label}</h2>
-            <p>Calories:{Math.floor(calories)}</p>
-            <p>Cuisine Type: <b>{cuisineType}</b></p>
+            <h2><span>Recipe Name:</span><br/> {label}</h2>
+            <div><hr/></div>
+            <p>Calories: {Math.floor(calories)}</p>
+            <p>Cuisine Type:  <b>{cuisineType}</b></p>
             <img src={image} alt={label} />
+            <div>
+                <button type="button" className="modal-btn">Ingredients</button>
+            </div>
             <div>
            {      
             <ul>

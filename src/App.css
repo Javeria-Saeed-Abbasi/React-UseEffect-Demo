@@ -61,10 +61,33 @@ body{
     border-radius: 10px;
     color: white;
     /* box-shadow: 5px 5px 5px 5px rgb(0, 0, 0); */
-    box-shadow: rgb(0, 0, 0) 0px 50px 40px -10px;}
-
+    box-shadow: rgb(0, 0, 0) 0px 50px 40px -10px;
+  }
+.recipecard h2 span{
+  color: #f7c216;
+  font-size: xx-large;
+}
+.recipecard hr{
+  border: 1px solid #f7c216;
+}
+.recipecard p{
+  font-size: 20px;
+}
+/* .recipecard h2{
+  font-size: 18px;
+} */
 .recipecard ul {
   display: none;
+}
+.recipecard .modal-btn{
+  background-color: #f7c216;
+  color: #000;
+  margin: 15px 0px 15px 0px;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 50px;
+  font-size: large;
+  font-weight: bold;
 }
 .search-bar {
   margin-bottom: 10px;
