@@ -14,7 +14,7 @@ const App = () => {
   // For Searching
   const [search, setSearch] = useState('');
   // For SetQuery
-  const [query, SetQuery] = useState('cherry');
+  const [query, SetQuery] = useState('sushi');
 
   const API_URL =`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
